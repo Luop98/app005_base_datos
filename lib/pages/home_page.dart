@@ -17,7 +17,9 @@ class _HomePageState extends State<HomePage> {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return MyformWidgets();
+        return MyformWidgets(
+          taskModel: TaskModel,
+        );
       },
     ).then((value) {
       setState(() {});
@@ -86,7 +88,13 @@ class _HomePageState extends State<HomePage> {
                   child: ListTile(
                     title: Text(myTasks[index].title),
                     subtitle: Text(myTasks[index].description),
-                    trailing: Text(myTasks[index].id.toString()),
+                    trailing: IconButton(
+                       onPressed:(){
+                        showDialoForm();
+                    },
+                    icon: Icon(Icons.edit),
+                    ),
+                   
                   ),
                 );
               },
