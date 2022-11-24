@@ -3,7 +3,7 @@ import 'package:app05_basedatos/models/task_model.dart';
 import 'package:flutter/material.dart';
 
 class MyformWidgets extends StatefulWidget {
-  const MyformWidgets({Key? key}) : super(key: key);
+  const MyformWidgets({Key? key, required Type taskModel}) : super(key: key);
 
   @override
   State<MyformWidgets> createState() => _MyformWidgetsState();
